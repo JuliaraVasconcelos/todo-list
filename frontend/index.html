@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>ToDo List</title>
+</head>
+
+<body>
+    <main>
+        <form class="add-form">
+            <input type="text" placeholder="Add task" class="add-task">
+            <button type="submit">+</button>
+        </form>
+        <form class="edit-form hide" >
+            <p>Edit task</p>
+            <div class="form-control">
+                <input type="text" id="edit-input"/>
+                <button class="done-todo">
+                    <span class="material-symbols-outlined done-todo">check_circle</span>
+                </button>
+                <button id="cancel-edit-btn" class="cancel-todo"><span class="material-symbols-outlined">
+                    cancel
+                </span></button>
+            </div>
+        </form>
+        <table>
+            <tbody>
+                <tr class="todo-list">
+                    <!-- <td class="task">Task 1</td>
+                    <td class="date">january 00 2023 15:00</td>
+                    <td>
+                        <select>
+                            <option value="pending">Pending</option>
+                            <option value="ongoing">Ongoing</option>
+                            <option value="finished">Finished</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn-action" id="edit">
+                            <span class="material-symbols-outlined">
+                                edit_square
+                            </span>
+                        </button>
+                        <button class="btn-action" id="delete">
+                            <span class="material-symbols-outlined">
+                                delete
+                            </span>
+                        </button>
+                    </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

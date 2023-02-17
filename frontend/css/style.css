@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    background-color: #0099ff;
+}
+main{
+    background-color: #fff;
+    border-radius: .8rem;
+    padding: 2rem;
+    width: 90%;
+    margin: 4rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}   
+
+.add-form{
+    display: flex;
+    margin-bottom: 5rem;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    width: 100%;
+    height: 6rem;
+    flex: 1;
+    padding: 1.5rem;
+    border: .1rem solid #ddd;
+    border-radius: 1rem;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 660;
+}
+
+button[type="submit"]{
+    background-color: #0099ff;
+    height: 5.5rem;
+    width: 5.5rem;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;   
+    font-weight: 600;
+    cursor: pointer;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+td, th{
+    min-width: 40rem;
+    padding: 1rem 1.5rem;
+    border-right: .1rem solid #ddd;
+    text-align: center;
+    font-size: 1.6rem;
+}
+td{
+    color: #333;
+    font-weight: 600;
+}
+tr:nth-child(even){
+    background-color: #f5f5f5;
+}
+select{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: .8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: #ebebeb;
+}
+select:hover{
+    background-color: #ddd;
+}
+button{
+    border: none;
+    border-radius: .5rem;
+    margin: 1rem .5rem;
+    padding: .5rem;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.edit-todo {
+    background-color: orange;
+}
+.delete-todo, .cancel-todo {
+    background-color: rgb(255, 53, 53);
+}
+.done-todo {
+    background-color: rgb(33, 139, 0);
+}
+.done{
+    text-decoration: line-through;
+}
+.hide{
+    display: none;
+}

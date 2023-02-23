@@ -9,7 +9,7 @@ const editInput = document.querySelector('#edit-input')
 
 let oldInputValue;
 
-const saveToDo = (text) =>{
+const saveToDo = (text) => {
     const toDo = document.createElement("tr")
     toDo.classList.add('todo-list')
 
@@ -19,7 +19,7 @@ const saveToDo = (text) =>{
 
     const toDoTime = document.createElement('td')
     now = new Date()
-    toDoTime.innerHTML = now.getHours()+ ':'+ now.getMinutes() + ' - ' + now.getDate() + '/' + now.getMonth() + '/' + now.getFullYear()
+    toDoTime.innerHTML = now.getHours() + ':' + now.getMinutes() + ' - ' + now.getDate() + '/' + now.getMonth() + '/' + now.getFullYear()
     toDo.appendChild(toDoTime)
 
     const doneBtn = document.createElement('button')
@@ -48,16 +48,16 @@ const toggleForms = () => {
     toDoList.classList.toggle('hide')
 }
 
-const updateToDo = (text) =>{
+const updateToDo = (text) => {
     const todos = document.querySelectorAll('toDo')
     console.log('trocou');
 
     todos.forEach((toDo) => {
         console.log('trocou 2');
 
-        let toDoTitle = toDo.querySelector('h3')
+        let toDoTitle = toDo.querySelector('h3');
 
-        if(toDoTitle.innerText === oldInputValue){
+        if (toDoTitle.innerText === oldInputValue) {
             toDoTitle.innerText = text
         }
     })
@@ -69,22 +69,22 @@ addForm.addEventListener("submit", (e) => {
 
     const inputValue = addTask.value
 
-    if(inputValue){
+    if (inputValue) {
         saveToDo(inputValue)
     }
 })
 
-document.addEventListener('click', (e) =>{
+document.addEventListener('click', (e) => {
     const targetEl = e.target;
     const parentEl = targetEl.closest('tr');
     let toDoTitle;
 
-    if(parentEl && parentEl.querySelector('h3')){
+    if (parentEl && parentEl.querySelector('h3')) {
         toDoTitle = parentEl.querySelector('h3').innerText
     }
 
-    if (targetEl.classList.contains('done-todo')){
-        parentEl.classList.toggle('done');   
+    if (targetEl.classList.contains('done-todo')) {
+        parentEl.classList.toggle('done');
     }
 
     if (targetEl.classList.contains('edit-todo')) {
@@ -108,7 +108,7 @@ editForm.addEventListener('reset', (e) => {
     e.preventDefault()
     const editInputValue = editInput.value
 
-    if(editInputValue){
+    if (editInputValue) {
         updateToDo(editInputValue)
     }
     toggleForms()
